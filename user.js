@@ -1,13 +1,16 @@
-const axios = require('axios');
+users = [
+    {
+        id: 1,
+        name: "Mark",
+    },
+    {
+        id: 2,
+        name: "Finly",
+    },
+    {
+        id: 3,
+        name: "Smith",
+    },
+];
 
-const getUsers = async () => {
-  try {
-    const response = await axios.get('https://jsonplaceholder.typicode.com/users');
-    return response.data;
-  } catch (error) {
-    console.error('Error fetching users:', error.message);
-    return [];
-  }
-};
-
-module.exports = getUsers;
+module.exports = users;
